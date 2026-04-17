@@ -100,10 +100,12 @@ $('#generate-btn').addEventListener('click', () => {
     entry.tags = tagsRaw.split(',').map(t => t.trim()).filter(Boolean);
   }
 
-  // Format with 2-space indent, and add leading comma+newline for easy pasting
-  // right after an existing entry (before the closing `]`).
+  // Format with 2-space indent, then indent every line an additional 2 spaces
+  // so the pasted object aligns with existing array items. Leading comma+newline
+  // makes it drop in cleanly right after an existing entry (before the closing `]`).
   const json = JSON.stringify(entry, null, 2);
-  jsonOutput.value = ',\n' + json;
+  const indented = json.split('\n').map(line => '  ' + line).join('\n');
+  jsonOutput.value = ',\n' + indented;
   output.classList.remove('hidden');
   copyStatus.textContent = '';
   output.scrollIntoView({ behavior: 'smooth', block: 'start' });
