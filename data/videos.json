@@ -1,31 +1,10 @@
 [
   {
-    "map": "Clubhouse",
-    "site": "2F Gym / Bedroom",
+    "map": "Villa",
+    "site": "2F Aviator Room / Games Room",
     "side": "defense",
-    "operator": "Mute",
-    "title": "Jammer placement for CCTV setup",
-    "url": "https://www.instagram.com/reel/EXAMPLE1",
-    "notes": "Example entry — delete this once you add real ones.",
-    "tags": ["gadget-placement"]
-  },
-  {
-    "map": "Kafe Dostoyevsky",
-    "site": "2F Reading Room / Fireplace Hall",
-    "side": "attack",
-    "operator": "Thatcher",
-    "title": "Cocktail EMP lineup from outside",
-    "url": "https://www.tiktok.com/@example/video/EXAMPLE2",
-    "notes": "Example entry — delete this once you add real ones.",
-    "tags": ["lineup"]
-  },
-  
-{
-  "map": "Villa",
-  "site": "2F Aviator Room / Games Room",
-  "side": "defense",
-  "operator": "Maestro",
-  "title": "Hatch Maestro",
-  "url": "https://www.instagram.com/reel/DVtx2s1D_R0/?igsh=MXM3OHE1N2Jqeno1ag=="
-}
+    "operator": "Maestro",
+    "title": "Hatch Maestro",
+    "url": "https://www.instagram.com/reel/DVtx2s1D_R0/?igsh=MXM3OHE1N2Jqeno1ag=="
+  }
 ]
