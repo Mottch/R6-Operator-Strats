@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f1419">
+  <title>R6 Playbook</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <h1><a href="#" id="home-link">R6 Playbook</a></h1>
+      <a href="add.html" class="add-btn">+ Add Video</a>
+    </div>
+    <input
+      type="search"
+      id="search"
+      placeholder="Search videos (e.g. 'mute gym', 'kafe cocktail')..."
+      autocomplete="off"
+    >
+    <nav id="breadcrumbs" class="breadcrumbs"></nav>
+  </header>
+
+  <main id="content">
+    <div class="loading">Loading...</div>
+  </main>
+
+  <footer>
+    <p>Edit <code>data/videos.json</code> directly on GitHub to collaborate.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

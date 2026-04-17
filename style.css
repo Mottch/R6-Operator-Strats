@@ -1,0 +1,463 @@
+/* R6 Playbook — lightweight dark theme, mobile-first */
+
+:root {
+  --bg: #0f1419;
+  --bg-elev: #1a2029;
+  --bg-hover: #242c38;
+  --border: #2e3744;
+  --text: #e6e8ea;
+  --text-dim: #9aa5b1;
+  --accent: #ff6b35;
+  --accent-hover: #ff8758;
+  --attack: #ff6b35;
+  --defense: #4a90e2;
+  --success: #4caf50;
+  --radius: 8px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+code {
+  background: var(--bg-elev);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* ---------- Header ---------- */
+header {
+  background: var(--bg-elev);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 16px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+h1 a { color: var(--accent); }
+
+.add-btn {
+  background: var(--accent);
+  color: white;
+  padding: 8px 14px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.add-btn:hover { background: var(--accent-hover); }
+.add-btn.secondary {
+  background: var(--bg-hover);
+  color: var(--text);
+}
+
+#search {
+  width: 100%;
+  padding: 10px 14px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 1rem;
+  outline: none;
+}
+
+#search:focus {
+  border-color: var(--accent);
+}
+
+/* ---------- Breadcrumbs ---------- */
+.breadcrumbs {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  min-height: 1.2em;
+}
+
+.breadcrumbs a {
+  color: var(--accent);
+}
+
+.breadcrumbs a:hover { text-decoration: underline; }
+
+.breadcrumbs .sep { margin: 0 6px; opacity: 0.5; }
+
+.breadcrumbs .current { color: var(--text); font-weight: 500; }
+
+/* ---------- Main ---------- */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+h2 {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+  color: var(--text-dim);
+  font-weight: 500;
+}
+
+h3 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+section { margin-bottom: 24px; }
+
+/* ---------- Tiles (grid) ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 10px;
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 12px;
+  min-height: 70px;
+  color: var(--text);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  text-align: left;
+  transition: background 0.1s, border-color 0.1s;
+}
+
+.tile:hover, .tile:focus {
+  background: var(--bg-hover);
+  border-color: var(--accent);
+  outline: none;
+}
+
+.tile-title { font-weight: 600; }
+.tile-count { font-size: 0.8rem; color: var(--text-dim); margin-top: 4px; }
+
+/* ---------- Side toggle ---------- */
+.side-toggle {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 10px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-dim);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.1s;
+}
+
+.toggle-btn:hover { background: var(--bg-hover); }
+
+.toggle-btn.active {
+  color: white;
+}
+
+.toggle-btn[data-side="attack"].active {
+  background: var(--attack);
+  border-color: var(--attack);
+}
+
+.toggle-btn[data-side="defense"].active {
+  background: var(--defense);
+  border-color: var(--defense);
+}
+
+.toggle-btn .count { font-weight: 400; opacity: 0.85; }
+
+/* ---------- Operator list ---------- */
+.op-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.op-card {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+}
+
+.op-card h3 {
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+/* ---------- Video list items ---------- */
+.video-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.video-item a {
+  display: block;
+  padding: 10px 12px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  transition: background 0.1s, border-color 0.1s;
+}
+
+.video-item a:hover {
+  background: var(--bg-hover);
+  border-color: var(--accent);
+}
+
+.vi-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.vi-title {
+  font-weight: 500;
+  flex: 1;
+}
+
+.vi-host {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.vi-notes {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  margin-top: 4px;
+}
+
+.vi-tags {
+  margin-top: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.tag {
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text-dim);
+}
+
+.ctx {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+}
+
+/* ---------- Empty / loading / error ---------- */
+.empty, .loading, .error {
+  text-align: center;
+  padding: 30px 16px;
+  color: var(--text-dim);
+}
+
+.error pre {
+  text-align: left;
+  background: var(--bg-elev);
+  padding: 12px;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 0.85rem;
+}
+
+/* ---------- Forms (add.html) ---------- */
+.add-form {
+  max-width: 600px;
+}
+
+.hint {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  margin-top: 0;
+}
+
+form label {
+  display: block;
+  margin-bottom: 14px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--text-dim);
+}
+
+form input[type="text"],
+form input[type="url"],
+form select,
+form textarea {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  padding: 10px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 50px;
+}
+
+form input:focus, form select:focus, form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.radio-row {
+  display: flex;
+  gap: 16px;
+  margin-top: 4px;
+}
+
+label.radio {
+  font-weight: 400;
+  color: var(--text);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.btn-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  background: var(--bg-hover);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: center;
+}
+
+.btn:hover {
+  background: var(--border);
+  border-color: var(--accent);
+}
+
+.btn.primary {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.btn.primary:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+.btn.secondary { background: var(--bg-elev); }
+
+.output {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.output.hidden { display: none; }
+
+#json-output {
+  font-family: 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 0.85rem;
+  width: 100%;
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px;
+  resize: vertical;
+}
+
+.status {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  min-height: 1.2em;
+}
+
+.status.success { color: var(--success); }
+
+/* ---------- Footer ---------- */
+footer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 16px 40px;
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 0.8rem;
+}
+
+/* ---------- Recent section ---------- */
+.recent h2 { color: var(--text-dim); }
+.recent .video-item a { border-left: 3px solid var(--accent); }
+
+/* ---------- Mobile tweaks ---------- */
+@media (max-width: 480px) {
+  .grid { grid-template-columns: 1fr 1fr; }
+  h1 { font-size: 1.1rem; }
+}

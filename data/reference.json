@@ -1,0 +1,123 @@
+{
+  "_comment": "Ranked map pool as of Y11S1 mid-season rotation (April 16, 2026). Sites are best-effort starter values — verify/edit to match your team's callouts.",
+  "maps": {
+    "Bank": [
+      "Basement Lockers / CCTV",
+      "1F Open Area / Staff Room",
+      "1F Tellers / Archives",
+      "2F Executive Lounge / CEO Office"
+    ],
+    "Border": [
+      "1F Ventilation / Workshop",
+      "1F Armory Lockers / Archives",
+      "2F Tellers / Customs Inspection",
+      "2F Supply Room / Bathroom"
+    ],
+    "Chalet": [
+      "Basement Wine Cellar / Snowmobile Garage",
+      "1F Kitchen / Trophy Room",
+      "1F Bar / Gaming Room",
+      "2F Master Bedroom / Office"
+    ],
+    "Clubhouse": [
+      "Basement Church / Arsenal Room",
+      "1F Bar / Stock Room",
+      "2F Gym / Bedroom",
+      "2F Cash Room / CCTV"
+    ],
+    "Coastline": [
+      "1F Kitchen / Service Entrance",
+      "1F Billiards / Sunrise Bar",
+      "2F Hookah Lounge / Billiards",
+      "2F Theater / Penthouse"
+    ],
+    "Consulate": [
+      "Basement Garage / Cafeteria",
+      "1F Tellers / Lobby",
+      "1F Meeting Room / Consulate",
+      "2F Office / Archives"
+    ],
+    "Emerald Plains": [
+      "1F Kitchen / Dining Room",
+      "1F Bar / Lounge",
+      "2F Office / Gym",
+      "2F Green Room / Master Bedroom"
+    ],
+    "Fortress": [
+      "1F Briefing Room / Kitchen",
+      "1F Dormitory / Bathroom",
+      "2F Commander Office / Archives",
+      "2F Dining Hall / Meeting Room"
+    ],
+    "Kafe Dostoyevsky": [
+      "1F Kitchen / Service Entrance",
+      "1F Bar / Cocktail Lounge",
+      "2F Reading Room / Fireplace Hall",
+      "3F Cocktail Lounge / Mining Room"
+    ],
+    "Kanal": [
+      "1F Kitchen / Kayak Garage",
+      "1F Server Room / Security",
+      "2F Map Room / Radar Room",
+      "2F Control Room / Floatation Room"
+    ],
+    "Lair": [
+      "1F Infirmary / Dining Hall",
+      "1F Mechanical / Server",
+      "2F Private Suite / Missile Silo",
+      "2F Observatory / Laboratory"
+    ],
+    "Nighthaven Labs": [
+      "1F Office / Cafeteria",
+      "1F Tellers / Computers",
+      "2F Archives / Warehouse",
+      "2F Operations / Meeting Room"
+    ],
+    "Oregon": [
+      "Basement Laundry / Supply Room",
+      "1F Kitchen / Dining Hall",
+      "2F Meeting Hall / Kids Dormitory",
+      "2F Dorms Main / Tower"
+    ],
+    "Outback": [
+      "1F Office / Laundry",
+      "1F Kitchen / Games Room",
+      "2F Mechanical / Party Room",
+      "2F Garage / Compressor"
+    ],
+    "Skyscraper": [
+      "1F Kitchen Service / Kitchen",
+      "1F Bedroom / Office",
+      "2F Karaoke / Exhibition",
+      "2F Tea Room / Work Area"
+    ],
+    "Theme Park": [
+      "1F Daycare / Bunk",
+      "1F Arcade / Lab Storage",
+      "2F Armory / Throne",
+      "2F Initiation / Office"
+    ],
+    "Villa": [
+      "1F Kitchen / Dining Room",
+      "1F Statuary / Living Room",
+      "2F Aviator Room / Games Room",
+      "2F Master Bedroom / Trophy"
+    ]
+  },
+  "operators": {
+    "attack": [
+      "Ace", "Amaru", "Ash", "Blackbeard", "Blitz", "Brava", "Buck", "Capitão",
+      "Deimos", "Dokkaebi", "Finka", "Flores", "Fuze", "Glaz", "Gridlock", "Grim",
+      "Hibana", "Iana", "IQ", "Jackal", "Kali", "Lion", "Maverick", "Montagne",
+      "Nøkk", "Nomad", "Osa", "Ram", "Rauora", "Sens", "Sledge", "Solid Snake",
+      "Striker", "Thatcher", "Thermite", "Twitch", "Ying", "Zero", "Zofia"
+    ],
+    "defense": [
+      "Alibi", "Aruni", "Azami", "Bandit", "Castle", "Caveira", "Clash", "Denari", 
+      "Doc", "Echo", "Ela", "Fenrir", "Frost", "Goyo", "Jäger", "Kaid", "Kapkan",
+      "Lesion", "Maestro", "Melusi", "Mira", "Mozzie", "Mute", "Oryx", "Pulse",
+      "Rook", "Sentry", "Skopós", "Smoke", "Solis", "Tachanka", "Thorn",
+      "Thunderbird", "Tubarão", "Valkyrie", "Vigil", "Wamai", "Warden"
+    ]
+  }
+}

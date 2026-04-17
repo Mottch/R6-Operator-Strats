@@ -1,0 +1,22 @@
+[
+  {
+    "map": "Clubhouse",
+    "site": "2F Gym / Bedroom",
+    "side": "defense",
+    "operator": "Mute",
+    "title": "Jammer placement for CCTV setup",
+    "url": "https://www.instagram.com/reel/EXAMPLE1",
+    "notes": "Example entry — delete this once you add real ones.",
+    "tags": ["gadget-placement"]
+  },
+  {
+    "map": "Kafe Dostoyevsky",
+    "site": "2F Reading Room / Fireplace Hall",
+    "side": "attack",
+    "operator": "Thatcher",
+    "title": "Cocktail EMP lineup from outside",
+    "url": "https://www.tiktok.com/@example/video/EXAMPLE2",
+    "notes": "Example entry — delete this once you add real ones.",
+    "tags": ["lineup"]
+  }
+]

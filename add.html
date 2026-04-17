@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f1419">
+  <title>Add Video - R6 Playbook</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <h1><a href="index.html">R6 Playbook</a></h1>
+      <a href="index.html" class="add-btn secondary">← Back</a>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="add-form">
+      <h2>Add a video</h2>
+      <p class="hint">Fill this in, copy the JSON, paste it into <code>data/videos.json</code> on GitHub.</p>
+
+      <form id="entry-form" onsubmit="return false;">
+        <label>
+          Map
+          <select id="f-map" required>
+            <option value="">— select —</option>
+          </select>
+        </label>
+
+        <label>
+          Site
+          <select id="f-site" required disabled>
+            <option value="">— select a map first —</option>
+          </select>
+        </label>
+
+        <label>
+          Side
+          <div class="radio-row">
+            <label class="radio"><input type="radio" name="f-side" value="attack"> Attack</label>
+            <label class="radio"><input type="radio" name="f-side" value="defense" checked> Defense</label>
+          </div>
+        </label>
+
+        <label>
+          Operator
+          <select id="f-operator" required>
+            <option value="">— select —</option>
+          </select>
+        </label>
+
+        <label>
+          Title
+          <input type="text" id="f-title" placeholder="e.g. Jammer placement for gym window" required>
+        </label>
+
+        <label>
+          URL
+          <input type="url" id="f-url" placeholder="https://www.instagram.com/reel/..." required>
+        </label>
+
+        <label>
+          Notes (optional)
+          <textarea id="f-notes" rows="2" placeholder="e.g. Works best paired with Smoke"></textarea>
+        </label>
+
+        <label>
+          Tags (optional, comma-separated)
+          <input type="text" id="f-tags" placeholder="lineup, gadget-placement, roam">
+        </label>
+
+        <div class="btn-row">
+          <button type="button" id="generate-btn" class="btn primary">Generate JSON</button>
+        </div>
+      </form>
+
+      <div id="output" class="output hidden">
+        <h3>Copy this and paste it into <code>data/videos.json</code></h3>
+        <p class="hint">Paste it as a new item in the array (add a comma after the previous entry).</p>
+        <textarea id="json-output" readonly rows="10"></textarea>
+        <div class="btn-row">
+          <button type="button" id="copy-btn" class="btn">Copy to clipboard</button>
+          <a id="github-link" href="#" target="_blank" rel="noopener" class="btn secondary">
+            Open videos.json on GitHub →
+          </a>
+        </div>
+        <p id="copy-status" class="status"></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="add.js"></script>
+</body>
+</html>
