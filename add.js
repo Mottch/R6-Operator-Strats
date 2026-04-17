@@ -3,7 +3,7 @@
 
 // ⚠️ EDIT THIS: change to your GitHub user/repo so the "Open on GitHub" button works.
 // Format: "username/repo-name"
-const GITHUB_REPO = 'YOUR_USERNAME/YOUR_REPO';
+const GITHUB_REPO = 'Mottch/R6-Operator-Strats';
 const GITHUB_BRANCH = 'main';
 
 let reference = null;
